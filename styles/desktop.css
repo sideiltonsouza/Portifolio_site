@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     box-sizing: border-box;
     scrollbar-width: none;
     font-family: poppins, Arial, Helvetica, sans-serif;
@@ -313,7 +312,30 @@ section {
 #projetos .centro .left span:hover,
 #projetos .centro .right span:hover{
     transform: rotate(0);
+    z-index: 11;
 }
 #contato {
     background: #fca311;
+}
+#contato .centro{
+    display: flex;
+    justify-content: center;
+}
+#contato .centro .cont_center{
+    z-index: 10;
+}
+#contato_centro{
+    z-index: 11;
+    position: absolute;
+    width: 500px;
+    height: 665px;
+    background-image: url(../contents/images/celular_whats.png);
+    background-size: 60%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+#contato .centro .right{
+    background-image: url(../contents/images/espiral_branca.svg);
+    background-repeat: no-repeat;
+    background-position: 0 120px;
 }
