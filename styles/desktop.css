@@ -198,10 +198,15 @@ section {
     width: 229px;
     height: 229px;
     margin-right: 20%;
-    border: #48cae4 solid 5px;
+    border: #0077b6 solid 5px;
     box-shadow: inset 0 0 0 5px #e5e5e5;
     border-radius: 20px;
     transform: rotate(45deg);
+    background-image: url(../contents/images/bg_midias.jpg);
+    background-size: cover;
+}
+#projetos .centro .left span:nth-of-type(1):hover{
+    background: #0077b6;
 }
 #projetos .centro .left span:nth-of-type(1):hover::before{
     content: "mídias sociais";
@@ -226,13 +231,18 @@ section {
     box-shadow: inset 0 0 0 5px #e5e5e5;
     border-radius: 20px;
     transform: rotate(45deg);
+    background-image: url(../contents/images/bg_logos.jpg);
+    background-size: cover;
+}
+#projetos .centro .left span:nth-of-type(2):hover{
+    background: #fca311;
 }
 #projetos .centro .left span:nth-of-type(2):hover::before{
     content: "logos";
     width: 50%;
     position: absolute;
     text-align: center;
-    color: #e5e5e5;
+    color: #14213d;
     font-size: 1.3em;
     line-height: 1em;
     font-family: poppins, Arial, Helvetica, sans-serif;
@@ -321,11 +331,32 @@ section {
     display: flex;
     justify-content: center;
 }
-#contato .centro .cont_center{
-    z-index: 10;
+#contato .centro .left{
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 11;
+}
+#contato .centro .left img:nth-of-type(1){
+    margin-left: 7%;
+    margin-bottom: 81px;
+}
+#contato .centro .left img:nth-of-type(2){
+    margin-left: 50%;
+}
+#contato .centro .left a{
+    text-decoration: none;
+    width: 50%;
+    margin-left: 30%;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.1em;
+    padding: 1.5em 2em;
+    color: #14213d;
+    background: #E9E4D8;
+    margin-bottom: 41px;
 }
 #contato_centro{
-    z-index: 11;
+    z-index: 10;
     position: absolute;
     width: 500px;
     height: 665px;
@@ -333,6 +364,15 @@ section {
     background-size: 60%;
     background-position: bottom;
     background-repeat: no-repeat;
+}
+#contato .centro::after,
+#contato .centro::before {
+    content: "";
+    width: 5px;
+    height: 40%;
+    float: left;
+    margin-top: 22%;
+    background: #14213d;
 }
 #contato .centro .right{
     background-image: url(../contents/images/espiral_branca.svg);
