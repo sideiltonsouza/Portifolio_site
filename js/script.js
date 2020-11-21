@@ -1,11 +1,26 @@
+
+//Rola para a seção correspondente ao clique no menu
 const mover = (medida) => {
-    var rolagem = medida * 650;
+    var rolagem = medida * 665;
     window.scrollTo({
         left: 0,
         top: rolagem,
         behavior: 'smooth'
     });
 }
+
+
+//Esconde a barra de menu ao rolar
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("barra_menus").style.top = "0";
+  } else {
+    document.getElementById("barra_menus").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+} 
 
 
 //Animacao
