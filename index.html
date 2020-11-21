@@ -7,14 +7,14 @@
     <title>Sideilton Souza</title>
     <link rel="stylesheet" href="styles/fontes.css">
     <link rel="stylesheet" href="styles/desktop.css">
-    <link rel="stylesheet" href="styles/animat.css"> <!--Mudar para animate antes de por pra produção e descomentar treco a partir do debounce no script.js-->
+    <link rel="stylesheet" href="styles/animate.css"> <!--Mudar para animate antes de por pra produção e descomentar treco a partir do debounce no script.js-->
 </head>
 
 <body>
     <div class="container">
         <nav id="barra_menus">
             <div class="centro" id="navbar">
-                <a href="index.html"></a>
+                <div onclick="mover(0)"></div>
                 <span id="bg_logo" class="cont_center"></span>
                 <ul id="menus" class="cont_center">
                     <li id="menu_sobre" onclick="mover(1)">sobre</li>
@@ -23,15 +23,15 @@
                 </ul>
             </div>
         </nav>
-        <header id="capa">
-            <div class="centro">
-                <div class="left cont_center"  data-anime="top">
-                    <img src="contents/icons/LOGO_WHITE.svg" alt="" srcset="">
-                    <img src="contents/images/ondinha_amarela.svg" alt="" srcset="">
+        <header id="capa" class="animate__animated animate__fadeIn">
+            <div class="centro" id="banner">
+                <div class="left cont_center"  >
+                    <img class="animate__animated animate__fadeIn" src="contents/icons/LOGO_WHITE.svg" alt="" srcset="">
+                    <img class="animate__animated animate__fadeInLeft" src="contents/images/ondinha_amarela.svg" alt="" srcset="">
                 </div>
-                <div class="right cont_center" data-anime="right">
-                    <img src="contents/images/titulo.svg" alt="" srcset="">
-                    <img src="contents/images/sombra.png" alt="" srcset="">
+                <div class="right cont_center">
+                    <img class="animate__animated animate__fadeInUp" src="contents/images/titulo.svg" alt="" srcset="">
+                    <img class="animate__animated animate__fadeInUp" src="contents/images/sombra.png" alt="" srcset="">
                 </div>
             </div>
         </header>
@@ -48,28 +48,52 @@
         </section>
         <section id="projetos">
             <div class="centro">
-                <div id="midiaSocial" data-anime="right" class="galeria">
-                    <img src="contents/images/midiasocial/1.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/2.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/3.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/4.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/5.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/6.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/7.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/8.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/9.jpg" alt="" srcset="">
-                    <img src="contents/images/midiasocial/10.jpg" alt="" srcset="">
+                <div data-anime="right" class="galeria" id="galeria">
+                    <div id="close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="midiaSocial" class="fotos">
+                        <img src="contents/images/midiasocial/1.jpg" alt="" srcset="">
+                        <img src="contents/images/midiasocial/2.jpg" alt="" srcset="">
+                        <img src="contents/images/midiasocial/3.jpg" alt="" srcset="">
+                        <img src="contents/images/midiasocial/4.jpg" alt="" srcset="">
+                    </div>
+                    <div id="logomarcas" class="fotos">
+                        <img src="contents/images/logos/1.jpg" alt="" srcset="">
+                        <img src="contents/images/logos/2.jpg" alt="" srcset="">
+                        <img src="contents/images/logos/3.jpg" alt="" srcset="">
+                        <img src="contents/images/logos/4.jpg" alt="" srcset="">
+                    </div>
+                    <div id="sites" class="fotos">
+                        <img src="contents/images/sites/1.jpg" alt="" srcset="">
+                        <img src="contents/images/sites/2.jpg" alt="" srcset="">
+                        <img src="contents/images/sites/3.jpg" alt="" srcset="">
+                    </div>
+                    <div id="impressos" class="fotos">
+                        <img src="contents/images/impressos/1.jpg" alt="" srcset="">
+                        <img src="contents/images/impressos/2.jpg" alt="" srcset="">
+                        <img src="contents/images/impressos/3.jpg" alt="" srcset="">
+                        <img src="contents/images/impressos/4.jpg" alt="" srcset="">
+                    </div>
+                    <div id="cartaoDigital" class="fotos">
+                        <img src="contents/images/cartaodigital/Juliana.jpg" alt="" srcset="">
+                        <img src="contents/images/cartaodigital/Que Pudinzinho.jpg" alt="" srcset="">
+                        <img src="contents/images/cartaodigital/Rodrigo Leitao.jpg" alt="" srcset="">
+                        <img src="contents/images/cartaodigital/Teia me Socorre.jpg" alt="" srcset="">
+                    </div>
                 </div>
+                
                 <div class="left cont_center" data-anime="left">
                     <img src="contents/images/projetos.svg" alt="" srcset="" data-anime="left">
-                    <span></span>
-                    <span></span>
+                    <span id="midias" onclick="abre('midiaSocial')"></span>
+                    <span id="logos" onclick="abre('logomarcas')"></span>
                 </div>
                 <div class="right cont_center" data-anime="right">
                     <img src="contents/images/espiral_branca.svg" alt="" srcset="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span id="web" onclick="abre('sites')"></span>
+                    <span id="impressao" onclick="abre('impressos')"></span>
+                    <span id="card" onclick="abre('cartaoDigital')"></span>
                 </div>
             </div>
         </section>

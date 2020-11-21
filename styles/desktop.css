@@ -4,6 +4,11 @@
     box-sizing: border-box;
     scrollbar-width: none;
     font-family: poppins, Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 html,
@@ -40,10 +45,11 @@ body {
     justify-content: space-between;
 }
 
-#navbar a {
+#navbar div {
     width: 120px;
     height: 60px;
     position: absolute;
+    cursor: pointer;
 }
 
 #bg_logo {
@@ -93,7 +99,9 @@ section {
     max-width: 1000px;
     min-width: 800px;
 }
-
+#banner{
+    align-items: flex-end;
+}
 .cont_center {
     flex: 1;
 }
@@ -398,20 +406,55 @@ section {
     background-position: 0 120px;
 }
 .galeria{
+    display: none;
+    z-index: 12;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    padding-bottom: 40px;
+    min-width: 900px;
+    height: 90vh;
+    top: 50px;
+    background: #e5e5e5;
+    transition: all .5s;
+}
+.galeria #close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 15;
+    width: 70px;
+    height: 70px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #14213d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.galeria #close span{
+    position: absolute;
+    width: 70%;
+    height: 5px;
+    border-radius: 2px;
+    background: #e5e5e5;
+    transform: rotate(45deg);
+}
+.galeria #close span:first-child{
+    transform: rotate(-45deg);
+}
+.galeria .fotos{
+    display: none;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px;
-    z-index: 12;
-    position: absolute;
-    width: 80%;
-    min-width: 900px;
-    height: 90%;
-    background: #0077b6;
     overflow-y: scroll;
 }
-.galeria img{
+.galeria .fotos img{
     flex: 1;
     min-width: 23%;
     max-width: 25%;
@@ -423,14 +466,4 @@ section {
     flex: 1.2;
     max-width: 27%;
     box-shadow: #0001026e 0 0 30px;
-}
-.gallery__prev, .gallery__next{
-    z-index: 40;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #fca311;
-}
-.gallery__next{
-    transform: translate(0, 200%);
 }
