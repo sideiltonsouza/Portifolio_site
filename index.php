@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles/desktop.css">
     <link rel="stylesheet" href="styles/animate.css">
 </head>
-
 <body>
     <div class="container">
         <nav id="barra_menus">
@@ -36,7 +35,7 @@
                 </div>
             </div>
         </header>
-        
+
         <section id="sobre">
             <div class="centro">
                 <div class="left cont_center" data-anime="left">
