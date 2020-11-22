@@ -85,6 +85,6 @@ const showForm = () =>{
     continuar.style.display="none";
     for (var i = 0; i < el.length; i++) {
         el[i].style.display="flex";
-        
+        el[i].classList.add('animate__animated','animate__slideInRight');
     }
 }
