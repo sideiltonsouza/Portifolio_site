@@ -1,31 +1,38 @@
-@font-face{
+@font-face {
     font-family: poppins;
     src: url(../fonts/Poppins-Regular.otf);
 }
-@font-face{
+
+@font-face {
     font-family: poppinsB;
     src: url(../fonts/Poppins-Bold.otf);
 }
-@font-face{
+
+@font-face {
     font-family: poppinsL;
     src: url(../fonts/Poppins-Light.otf);
 }
-@font-face{
+
+@font-face {
     font-family: panton;
     src: url(../fonts/Panton-Regular.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: pantonB;
     src: url(../fonts/Panton-Bold.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: pantonL;
     src: url(../fonts/Panton-Light.ttf);
 }
 
-#sobre,
-#projetos,
-#contato,
-footer{
-    display: none !important;
+@media screen and (max-width: 768px) {
+    #sobre,
+    #projetos,
+    #contato,
+    footer {
+        display: none !important;
+    }
 }
