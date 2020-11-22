@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sideilton Souza</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/fontes.css">
     <link rel="stylesheet" href="styles/desktop.css">
-    <link rel="stylesheet" href="styles/animate.css"> <!--Mudar para animate antes de por pra produção e descomentar treco a partir do debounce no script.js-->
+    <link rel="stylesheet" href="styles/animate.css">
 </head>
 
 <body>
@@ -105,7 +106,18 @@
                     <a href="https://api.whatsapp.com/send?phone=5561995452063">Clique aqui para me chamar no <strong>WhatsApp</strong></a>
                     <img src="contents/images/ondinha_branca.svg" alt="" srcset="">
                 </div>
-                <div class="right cont_center"></div>
+                <div class="right cont_center">
+                    <form action="" method="post">
+                        <h1>Ou me mande um e-mail:</h1>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="4" placeholder="Digite aqui sua mensagem" required></textarea>
+                        <button id="btnform" onclick="showForm()">Continuar</button>
+                        <label id="lnome" for="nome" class="inputs">Qual seu nome?</label>
+                        <input type="text" name="nome" id="nome" maxlength="40" placeholder="Digite aqui seu nome" class="inputs" required>
+                        <label id="lemail" for="email" class="inputs">E seu e-mail?</label>
+                        <input type="email" name="email" id="email" placeholder="Digite aqui seu e-mail" required class="inputs">
+                        <input type="submit" value="Enviar" class="inputs">
+                    </form>
+                </div>
             </div>
         </section>
     </div>

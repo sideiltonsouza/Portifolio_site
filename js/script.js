@@ -43,7 +43,7 @@ const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
 function animeScroll() {
-    const windowTop = window.pageYOffset + ((window.innerHeight * 4) / 4);
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
     target.forEach(function (element) {
         if ((windowTop) > element.offsetTop) {
             element.classList.add(animationClass);
@@ -58,7 +58,7 @@ animeScroll();
 if (target.length) {
     window.addEventListener('scroll', debounce(function () {
         animeScroll();
-    }, 200));
+    }, 0));
 }
 
 //Abre e fecha a galeria
@@ -70,10 +70,21 @@ const abre = (mostra) => {
     document.getElementById('galeria').style.display = "flex";
     document.getElementById(mostra).style.display = "flex";
     document.querySelector('body').style.overflow = "hidden";
-
+//fecha
     botao.addEventListener("click", function () {
         galeria.style.display = "none";
         document.getElementById(mostra).style.display="none";
         document.querySelector('body').style.overflow = "";
     })
+}
+
+//Eventos no form de contato
+var continuar = document.getElementById('btnform');
+var el = document.querySelectorAll('.inputs');
+const showForm = () =>{
+    continuar.style.display="none";
+    for (var i = 0; i < el.length; i++) {
+        el[i].style.display="flex";
+        
+    }
 }

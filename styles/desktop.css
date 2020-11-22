@@ -108,11 +108,10 @@ section {
 
 #capa,
 #projetos {
-    background: #14213d;
+    background-image: url(../contents/images/bg_capa.svg);
 }
 
 #capa {
-    background-image: url(../contents/images/bg_capa.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -401,6 +400,7 @@ section {
     background: #14213d;
 }
 #contato .centro .right{
+    height: 100%;
     background-image: url(../contents/images/espiral_branca.svg);
     background-repeat: no-repeat;
     background-position: 0 120px;
@@ -466,4 +466,86 @@ section {
     flex: 1.2;
     max-width: 27%;
     box-shadow: #0001026e 0 0 30px;
+}
+form{
+    z-index: 16;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 20% 30%;
+}
+form h1{
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.1em;
+    color: #14213d;
+    margin-bottom: 10px;
+}
+form input,
+textarea{
+    background: none;
+    outline: none;
+    border: #14213d solid 2px;
+    border-radius: 10px;
+    transition: all 1s;
+    box-shadow: none;
+}
+form #mensagem{
+    text-align: center;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    font-family: panton, Arial, Helvetica, sans-serif;
+    transition: all 1s;
+}
+form #mensagem::placeholder{
+    line-height: 75px;
+    color: #754a05;
+}
+form #mensagem:focus{
+    height: 200px;
+    background: #e5e5e5;
+}
+form input:focus{
+    background: #e5e5e5;
+}
+form #mensagem:focus::placeholder{
+    color: rgba(0, 0, 0, 0);
+}
+form button,
+form input[type="submit"]{
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #14213d;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 10px;
+    font-family: panton, Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    color: #e5e5e5;
+    cursor: pointer;
+}
+form label{
+    font-size: 1.3em;
+    color: #14213d;
+    margin: 20px 0 5px 0;
+}
+form #nome,
+form #email{
+    padding: 1em;
+    text-align: center;
+}
+form #email:invalid{
+    background: #fca311;
+}
+#lnome,
+#nome,
+#lemail,
+#email,
+input[type="submit"]{
+    display: none;
 }
