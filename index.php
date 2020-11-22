@@ -26,7 +26,7 @@
         </nav>
         <header id="capa" class="animate__animated animate__fadeIn">
             <div class="centro" id="banner">
-                <div class="left cont_center"  >
+                <div class="left cont_center">
                     <img class="animate__animated animate__fadeIn" src="contents/icons/LOGO_WHITE.svg" alt="" srcset="">
                     <img class="animate__animated animate__fadeInLeft" src="contents/images/ondinha_amarela.svg" alt="" srcset="">
                 </div>
@@ -38,7 +38,7 @@
         </header>
         <section id="sobre">
             <div class="centro">
-                <div class="left cont_center"  data-anime="left">
+                <div class="left cont_center" data-anime="left">
                     <img src="contents/images/sobre_mim.svg" alt="" srcset="">
                     <p data-anime="left">Olá, me chamo Sideilton Souza, tenho 27 anos, cursando Sistemas para Internet, aspirante a Designer Gráfico, amante de café, séries e doguinhos (mas não!, não vou mostrar eles aqui. Quem sabe numa outra oportuinidade)... Enfim, montei esse pequeno site pra mostrar um pouco do meu aprendizado até aqui com as tecnologias web: HTML5, CSS, JS e PHP; e ferramentas como Corel Draw e Photoshop (conhecimentos básicos mas procurando me especializar). Críticas construtivas são bem vindas, sinta-se à vontade! </p>
                 </div>
@@ -54,58 +54,60 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <div id="midiaSocial" class="fotos"></div>
+                    <div id="midiaSocial" class="fotos">
                         <?php
-                            $midiaSocial = "contents/images/midiasocial/";
-                            foreach(glob("$midiasocial/*", GLOB_NOSORT) as $image){  
-                                echo '<div id="midiaSocial" class="fotos"><img src="'.$image.'"alt=""srcset=""></div>';
-                            }
+                        $midiasocial = "contents/images/midiasocial/";
+                        foreach (glob("$midiasocial/*", GLOB_NOSORT) as $image) {
+                            echo '<img src="' . $image . '"alt=""srcset="">';
+                        }
                         ?>
-
-
-                        <img src="contents/images/midiasocial/1.jpg" alt="" srcset="">
-                        <img src="contents/images/midiasocial/2.jpg" alt="" srcset="">
-                        <img src="contents/images/midiasocial/3.jpg" alt="" srcset="">
-                        <img src="contents/images/midiasocial/4.jpg" alt="" srcset="">
                     </div>
+
                     <div id="logomarcas" class="fotos">
-                        <img src="contents/images/logos/1.jpg" alt="" srcset="">
-                        <img src="contents/images/logos/2.jpg" alt="" srcset="">
-                        <img src="contents/images/logos/3.jpg" alt="" srcset="">
-                        <img src="contents/images/logos/4.jpg" alt="" srcset="">
+                        <?php
+                        $logos = "contents/images/logos/";
+                        foreach (glob("$logos/*", GLOB_NOSORT) as $image) {
+                            echo '<img src="' . $image . '"alt=""srcset="">';
+                        }
+                        ?>
                     </div>
+
                     <div id="sites" class="fotos">
                         <div class="cartao">
                             <img src="contents/images/sites/1.jpg" alt="" srcset="">
                             <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
                         </div>
                         <div class="cartao">
-                            <img src="contents/images/sites/1.jpg" alt="" srcset="">
-                            <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
+                            <img src="contents/images/sites/2.jpg" alt="" srcset="">
+                            <a href="jogo/index.php" target="_blank" rel="noopener noreferrer">Visitar</a>
                         </div>
                         <div class="cartao">
-                            <img src="contents/images/sites/1.jpg" alt="" srcset="">
-                            <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
+                            <img src="contents/images/sites/3.jpg" alt="" srcset="">
+                            <a href="quiz/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
                         </div>
                     </div>
+
                     <div id="impressos" class="fotos">
-                        <img src="contents/images/impressos/1.jpg" alt="" srcset="">
-                        <img src="contents/images/impressos/2.jpg" alt="" srcset="">
-                        <img src="contents/images/impressos/3.jpg" alt="" srcset="">
-                        <img src="contents/images/impressos/4.jpg" alt="" srcset="">
+                        <?php
+                        $impressos = "contents/images/impressos/";
+                        foreach (glob("$impressos/*", GLOB_NOSORT) as $image) {
+                            echo '<img src="' . $image . '"alt=""srcset="">';
+                        }
+                        ?>
                     </div>
+
                     <div id="cartaoDigital" class="fotos">
-                        <div class="cartao">
-                            <img src="contents/images/cartaodigital/Juliana.jpg" alt="" srcset="">
-                        <a href="contents/downloads/juliana.pdf" download="Cartão interativo">baixar modelo</a>
-                        </div>
-                        
-                        <img src="contents/images/cartaodigital/Que Pudinzinho.jpg" alt="" srcset="">
-                        <img src="contents/images/cartaodigital/Rodrigo Leitao.jpg" alt="" srcset="">
-                        <img src="contents/images/cartaodigital/Teia me Socorre.jpg" alt="" srcset="">
+                        <?php
+                        $cartaodigital = "contents/images/cartaodigital/";
+                        foreach (glob("$cartaodigital*", GLOB_NOSORT) as $image) {
+                            echo '<div class="cartao"><img src="contents/images/cartaodigital/' . basename($image) . '"alt=""srcset=""><a href="contents/downloads/' . basename($image, 'jpg') . 'pdf"
+                            download="Cartão interativo ' . basename($image, '.jpg') . '">baixar modelo</a></div>';
+                        }
+                        ?>
                     </div>
+
                 </div>
-                
+
                 <div class="left cont_center" data-anime="left">
                     <img src="contents/images/projetos.svg" alt="" srcset="" data-anime="left">
                     <span id="midias" onclick="abre('midiaSocial')"></span>
