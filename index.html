@@ -54,7 +54,15 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <div id="midiaSocial" class="fotos">
+                    <div id="midiaSocial" class="fotos"></div>
+                        <?php
+                            $midiaSocial = "contents/images/midiasocial/";
+                            foreach(glob("$midiasocial/*", GLOB_NOSORT) as $image){  
+                                echo '<div id="midiaSocial" class="fotos"><img src="'.$image.'"alt=""srcset=""></div>';
+                            }
+                        ?>
+
+
                         <img src="contents/images/midiasocial/1.jpg" alt="" srcset="">
                         <img src="contents/images/midiasocial/2.jpg" alt="" srcset="">
                         <img src="contents/images/midiasocial/3.jpg" alt="" srcset="">
@@ -67,9 +75,18 @@
                         <img src="contents/images/logos/4.jpg" alt="" srcset="">
                     </div>
                     <div id="sites" class="fotos">
-                        <img src="contents/images/sites/1.jpg" alt="" srcset="">
-                        <img src="contents/images/sites/2.jpg" alt="" srcset="">
-                        <img src="contents/images/sites/3.jpg" alt="" srcset="">
+                        <div class="cartao">
+                            <img src="contents/images/sites/1.jpg" alt="" srcset="">
+                            <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
+                        </div>
+                        <div class="cartao">
+                            <img src="contents/images/sites/1.jpg" alt="" srcset="">
+                            <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
+                        </div>
+                        <div class="cartao">
+                            <img src="contents/images/sites/1.jpg" alt="" srcset="">
+                            <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
+                        </div>
                     </div>
                     <div id="impressos" class="fotos">
                         <img src="contents/images/impressos/1.jpg" alt="" srcset="">
@@ -78,7 +95,11 @@
                         <img src="contents/images/impressos/4.jpg" alt="" srcset="">
                     </div>
                     <div id="cartaoDigital" class="fotos">
-                        <img src="contents/images/cartaodigital/Juliana.jpg" alt="" srcset="">
+                        <div class="cartao">
+                            <img src="contents/images/cartaodigital/Juliana.jpg" alt="" srcset="">
+                        <a href="contents/downloads/juliana.pdf" download="Cartão interativo">baixar modelo</a>
+                        </div>
+                        
                         <img src="contents/images/cartaodigital/Que Pudinzinho.jpg" alt="" srcset="">
                         <img src="contents/images/cartaodigital/Rodrigo Leitao.jpg" alt="" srcset="">
                         <img src="contents/images/cartaodigital/Teia me Socorre.jpg" alt="" srcset="">
@@ -107,7 +128,7 @@
                     <img src="contents/images/ondinha_branca.svg" alt="" srcset="">
                 </div>
                 <div class="right cont_center">
-                    <form action="" method="post">
+                    <form action="contato.php" method="post">
                         <h1>Ou me mande um e-mail:</h1>
                         <textarea name="mensagem" id="mensagem" cols="30" rows="4" placeholder="Digite aqui sua mensagem" required></textarea>
                         <button id="btnform" onclick="showForm()">Continuar</button>
@@ -120,6 +141,12 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="centro">
+                <a href="https://api.whatsapp.com/send?phone=5561995452063"> WhatsApp: (61) 99545 2063</a>
+                <a href="mailto:sideiltonsouza@outlook.com">sideiltonsouza@outlook.com</a>
+            </div>
+        </footer>
     </div>
     <script src="js/script.js"></script>
 </body>

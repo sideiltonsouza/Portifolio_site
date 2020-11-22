@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual dos vingadores é você</title>
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="../styles/animacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span>Qual dos vingadores é você?</span>
+        </div>
+        <div id="questions">
+            <form action="resources/resultado.php" method="POST">
+                <div id="questao1" class="opc">
+                    <h1>Quem é você em uma <br>festa de amigos?</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q1" id="a1" value="a" class="q1">
+                        <label for="a1">A pessoa que controla a música e agita a festa.</label>
+                        <input type="radio" name="q1" id="a2" value="b" class="q1">
+                        <label for="a2">Alguém entre os que estão dançando.</label>
+                        <input type="radio" name="q1" id="a3" value="c" class="q1">
+                        <label for="a3">Está sempre perto da mesa de comida.</label>
+                        <input type="radio" name="q1" id="a4" value="d" class="q1">
+                        <label for="a4">Está em casa, longe da festa.</label>
+                    </div>
+                </div>
+                <div id="questao2" class="opc" style="display: none;">
+                    <h1>Em uma decisão difícil, com seus amigos, você:</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q2" id="b1" value="a" class="q2">
+                        <label for="b1">Faz o que é certo, acima de tudo.</label>
+                        <input type="radio" name="q2" id="b2" value="b" class="q2">
+                        <label for="b2">Decide em conjunto e faz o que todos acharem melhor.</label>
+                        <input type="radio" name="q2" id="b3" value="c" class="q2">
+                        <label for="b3">Calcula as alternativas e mostra pra todo mundo onde há menos danos.</label>
+                        <input type="radio" name="q2" id="b4" value="d" class="q2">
+                        <label for="b4">Espera alguém decidir e vai na onda.</label>
+                    </div>
+                </div>
+                <div id="questao3" class="opc" style="display: none;">
+                    <h1>Sua maior habilidade no meio da crise:</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q3" id="c1" value="a" class="q3">
+                        <label for="c1">Força</label>
+                        <input type="radio" name="q3" id="c2" value="b" class="q3">
+                        <label for="c2">Lealdade.</label>
+                        <input type="radio" name="q3" id="c3" value="c" class="q3">
+                        <label for="c3">Pensamento lógico.</label>
+                        <input type="radio" name="q3" id="c4" value="d" class="q3">
+                        <label for="c4">Abordagem criativa.</label>
+                    </div>
+                </div>
+                <div id="questao4" class="opc" style="display: none;">
+                    <h1>Qual dessas frases se aplica mais a você?</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q4" id="d1" value="a" class="q4">
+                        <label for="d1"><cite>"Se eu tivesse oito horas para derrubar uma árvore, passaria seis afiando
+                                meu machado" (Abraham Lincoln)</cite></label>
+                        <input type="radio" name="q4" id="d2" value="b" class="q4">
+                        <label for="d2"><cite>"Mil vidas eu tivesse, mil vidas eu daria pela libertação da minha pátria"
+                                (Tiradentes)</cite></label>
+                        <input type="radio" name="q4" id="d3" value="c" class="q4">
+                        <label for="d3"><cite>"Lutar pelo amor é bom, mas alcançá-lo sem luta é melhor." (William
+                                Shakespeare)</cite></label>
+                        <input type="radio" name="q4" id="d4" value="d" class="q4">
+                        <label for="d4"><cite>"O verdadeiro homem mede a sua força quando se defronta com o obstáculo."
+                                (Antoine de Saint-Exupéry)
+                            </cite></label>
+                    </div>
+                </div>
+                <div id="questao5" class="opc" style="display: none;">
+                    <h1>Como você faz para que os outros realizem uma tarefa?</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q5" id="e1" value="a" class="q5">
+                        <label for="e1">Cria um passo a passo para a realização da tarefa.</label>
+                        <input type="radio" name="q5" id="e2" value="b" class="q5">
+                        <label for="e2">Explica a tarefa e apresenta os motivos pelos quais deveriam fazer.</label>
+                        <input type="radio" name="q5" id="e3" value="c" class="q5">
+                        <label for="e3">Dá ordem de forma bem firme e direta.</label>
+                        <input type="radio" name="q5" id="e4" value="d" class="q5">
+                        <label for="e4">Faz primeiro e chama a seguirem o seu exemplo.</label>
+                    </div>
+                </div>
+                <div id="questao6" class="opc" style="display: none;">
+                    <h1>Um colega seu está fazendo algo errado para prejudicar alguém. Você:</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q6" id="f1" value="a" class="q6">
+                        <label for="f1">Monta um plano para expôr o que o colega está fazendo de errado.</label>
+                        <input type="radio" name="q6" id="f2" value="b" class="q6">
+                        <label for="f2">Apronta algo para que ele se dê mal.</label>
+                        <input type="radio" name="q6" id="f3" value="c" class="q6">
+                        <label for="f3">Conta para alguém que é autoridade sobre ele.</label>
+                        <input type="radio" name="q6" id="f4" value="d" class="q6">
+                        <label for="f4">Confronta ele para tirar satisfações.</label>
+                    </div>
+                </div>
+                <div id="questao7" class="opc" style="display: none;">
+                    <h1>Qual desses adjetivos as outras pessoas usariam pra te descrever melhor?</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q7" id="g1" value="a" class="q7">
+                        <label for="g1">Forte.</label>
+                        <input type="radio" name="q7" id="g2" value="b" class="q7">
+                        <label for="g2">Inteligente.</label>
+                        <input type="radio" name="q7" id="g3" value="c" class="q7">
+                        <label for="g3">Sem medo.</label>
+                        <input type="radio" name="q7" id="g4" value="d" class="q7">
+                        <label for="g4">Habilidoso/a.</label>
+                    </div>
+                </div>
+                <div id="questao8" class="opc" style="display: none;">
+                    <h1>Com qual personagem dos Simpsons você mais se identifica?</h1>
+                    <div class="opcoes">
+                        <input type="radio" name="q8" id="h1" value="a" class="q8">
+                        <label for="h1">Homer.</label>
+                        <input type="radio" name="q8" id="h2" value="b" class="q8">
+                        <label for="h2">Marge.</label>
+                        <input type="radio" name="q8" id="h3" value="c" class="q8">
+                        <label for="h3">Bart.</label>
+                        <input type="radio" name="q8" id="h4" value="d" class="q8">
+                        <label for="h4">Lisa.</label>
+                    </div>
+                </div>
+                <div id="calcular" style="display: none;">
+                    <input type="submit" value="Calcular" id="btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js">
+</script>
+</body>
+
+</html>

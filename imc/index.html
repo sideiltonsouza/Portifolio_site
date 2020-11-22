@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo IMC</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+</head>
+
+<body>
+    <form class="box" action="index.html" target="_self" method="POST">
+        <h1>Calcule seu IMC</h1>
+        <h5>Informe abaixo seus dados para calcular:</h5>
+        <div>
+            <h5>Seu peso:</h5>
+            <input type="text" id="peso" placeholder="">
+        </div>
+        <div>
+            <h5>Sua altura:</h5>
+            <input type="text" id="altura" placeholder="">
+        </div>
+        <div>
+            <input type="button" onclick="calcular()" value="Calcular">
+        </div>
+        <div class="retorno" id="retorno">
+
+            <div class="result">
+                <div id="res">
+                </div>
+
+            </div>
+            <div class="result grau" id="result">
+                <div id="situacao"></div>
+            </div>
+
+        </div>
+    </form>
+
+    <footer>
+        <p>Sideilton Souza</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
