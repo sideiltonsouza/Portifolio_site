@@ -54,10 +54,11 @@ body {
 
 #bg_logo {
     height: 100%;
+    margin-left: 8%;
     background-image: url(../contents/icons/logo_small.svg);
     background-size: 110px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left center;
 }
 
 #menus,
@@ -136,43 +137,28 @@ body {
     background-image: url(../contents/images/bg_capa.svg);
 }
 #capa {
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 100px;
 }
 header,
 section{
     display: flex;
-    justify-content: center;
     width: 100%;
     height: 740px;
 }
 .cont_center {
     width: 100%;
-    border: #fca311 solid 1px;
 }
 .left,
 .right {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-}
-
-footer{
     justify-content: center;
-    width: 100%;
-    height: 200px;
-    background: #e5e5e5;
-}
-footer .centro{
-    justify-content: space-around;
-}
-footer a{
-    text-decoration: none;
-    padding: 10px;
-    color: #5e5e5e;
-    font-size: .8em;
 }
 .centro {
     display: flex;
@@ -184,7 +170,25 @@ footer a{
 #banner{
     flex-direction: column-reverse;
 }
-
+#banner .right img{
+    width: 70%;
+    max-width: 350px;
+}
+#banner .left img{
+    width: 50%;
+    max-width: 200px;
+}
+#banner .right img:last-child{
+    margin-top: 10px;
+}
+#banner .left{
+    flex: .5;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+}
+#banner .left img:last-child{
+    margin-top: 50px;
+}
 #sobre {
     background: #e5e5e5;
 }
@@ -613,4 +617,19 @@ form #email:invalid{
 #email,
 input[type="submit"]{
     display: none;
+}
+footer{
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background: #e5e5e5;
+}
+footer .centro{
+    justify-content: space-around;
+}
+footer a{
+    text-decoration: none;
+    padding: 10px;
+    color: #5e5e5e;
+    font-size: .8em;
 }

@@ -205,10 +205,7 @@ footer a{
 #sobre .centro .right img {
     position: relative;
     margin-left: -45%;
-    animation: mexer;
-    animation-duration: 10s;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
+    animation: mexer 10s infinite;
 }
 #projetos .centro .left img {
     margin-top: -61px;
