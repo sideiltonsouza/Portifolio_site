@@ -7,16 +7,27 @@
     <title>Sideilton Souza</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/fontes.css">
-    <link rel="stylesheet" href="styles/desktop.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="styles/desktop.css">
     <link rel="stylesheet" href="styles/animate.css">
 </head>
+
 <body>
     <div class="container">
         <nav id="barra_menus">
             <div class="centro" id="navbar">
+                <div id="open_menu" class="animate__animated animate__fadeInRight" style="display:none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="close_menu" class="animate__animated animate__fadeInRight">
+                    <span></span>
+                    <span></span>
+                </div>
                 <div onclick="mover(0)"></div>
-                <span id="bg_logo" class="cont_center"></span>
-                <ul id="menus" class="cont_center">
+                <span id="bg_logo" class="cont_center animate__animated animate__fadeIn"></span>
+                <ul id="menus" class="cont_center" style="display:none">
                     <li id="menu_sobre" onclick="mover(1)">sobre</li>
                     <li id="menu_projetos" onclick="mover(2)">projetos</li>
                     <li id="menu_contato" onclick="mover(3)">contato</li>

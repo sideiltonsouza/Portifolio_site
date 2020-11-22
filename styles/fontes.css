@@ -22,3 +22,10 @@
     font-family: pantonL;
     src: url(../fonts/Panton-Light.ttf);
 }
+
+#sobre,
+#projetos,
+#contato,
+footer{
+    display: none !important;
+}

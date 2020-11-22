@@ -6,6 +6,11 @@ const mover = (medida) => {
         top: rolagem,
         behavior: 'smooth'
     });
+    if (screen.width < 769) {
+        document.getElementById("menus").style.display="none";
+        document.getElementById('close_menu').style.display="none";
+    }
+    
 }
 
 //Esconde a barra de menu ao rolar
@@ -88,3 +93,21 @@ const showForm = () =>{
         el[i].classList.add('animate__animated','animate__slideInRight');
     }
 }
+
+//Abre e fecha nebu nobile
+var btn_open = document.querySelector('#open_menu');
+var btn_close = document.getElementById('close_menu');
+var menu = document.getElementById('menus');
+
+btn_close.style.display="none";
+
+btn_open.addEventListener("click", () =>{
+    menu.style.display="flex";
+    menu.classList.add('animate__animated','animate__fadeInDown');
+    btn_close.style.display="flex";
+})
+
+btn_close.addEventListener("click", () =>{
+    menu.style.display="none";
+    btn_close.style.display="none";
+})
