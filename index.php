@@ -36,6 +36,7 @@
                 </div>
             </div>
         </header>
+        
         <section id="sobre">
             <div class="centro">
                 <div class="left cont_center" data-anime="left">
