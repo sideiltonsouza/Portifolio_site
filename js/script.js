@@ -68,19 +68,26 @@ if (target.length) {
 
 //Abre e fecha a galeria
 
-const abre = (mostra) => {
-    var botao = document.getElementById('close');
-    var galeria = document.querySelector('.galeria');
+var botao = document.getElementById('close');
+var galeria = document.querySelector('.galeria');
+var body_ = document.querySelector('body');
+var html_ = document.querySelector('html');
 
+const abre = (mostra) => {
     document.getElementById('galeria').style.display = "flex";
     document.getElementById(mostra).style.display = "flex";
-    document.querySelector('body').style.overflow = "hidden";
+
+    if(window.screen.width < 800){
+        html_.classList.add("over");
+        }
+
+    body_.style.overflow = "hidden";
 //fecha
     botao.addEventListener("click", function () {
         galeria.style.display = "none";
         document.getElementById(mostra).style.display="none";
-        document.querySelector('body').style.overflow = "";
-        
+        body_.style.overflow = "";
+        html_.classList.remove("over");
     })
 }
 
