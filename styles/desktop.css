@@ -543,6 +543,7 @@ textarea{
     border-radius: 10px;
     transition: all .5s;
     box-shadow: none;
+    width:100%;
 }
 form #mensagem{
     text-align: center;
@@ -570,6 +571,7 @@ form #mensagem:focus::placeholder{
 }
 form button,
 form input[type="submit"]{
+    justify-content:center;
     outline: none;
     border: none;
     width: 100%;
@@ -579,6 +581,7 @@ form input[type="submit"]{
     padding: 10px;
     font-family: panton, Arial, Helvetica, sans-serif;
     font-size: 1.3em;
+    text-align:center;
     color: #e5e5e5;
     cursor: pointer;
     transition: all .5s;
