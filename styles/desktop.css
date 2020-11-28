@@ -218,10 +218,7 @@ footer a{
 #projetos .centro .right img {
     margin-bottom: -90px;
     margin-left: -150px;
-    animation: mexer;
-    animation-duration: 10s;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
+    animation: mexer 10s infinite;
 }
 #projetos .centro .left span:nth-of-type(1){
     display: flex;
@@ -414,10 +411,7 @@ footer a{
     background-size: 60%;
     background-position: bottom;
     background-repeat: no-repeat;
-    animation: mexer;
-    animation-duration: 10s;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
+    animation: mexer 10s infinite;
 }
 #contato .centro::after,
 #contato .centro::before {

@@ -14,6 +14,7 @@ const mover = (medida) => {
 }
 
 //Esconde a barra de menu ao rolar
+/*
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
@@ -24,8 +25,7 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
-
-
+*/
 
 // Debounce do Lodash, evita repeticoes exageradas de eventos
 const debounce = function (func, wait, immediate) {
@@ -80,21 +80,24 @@ const abre = (mostra) => {
         galeria.style.display = "none";
         document.getElementById(mostra).style.display="none";
         document.querySelector('body').style.overflow = "";
+        
     })
 }
 
 //Eventos no form de contato
 var continuar = document.getElementById('btnform');
 var el = document.querySelectorAll('.inputs');
+var form = document.querySelector('form');
 const showForm = () =>{
     continuar.style.display="none";
     for (var i = 0; i < el.length; i++) {
         el[i].style.display="flex";
         el[i].classList.add('animate__animated','animate__slideInRight');
     }
+    form.classList.add("form_ativo");
 }
 
-//Abre e fecha nebu nobile
+//Abre e fecha menu nobile
 var btn_open = document.querySelector('#open_menu');
 var btn_close = document.getElementById('close_menu');
 var menu = document.getElementById('menus');
