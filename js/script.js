@@ -113,7 +113,7 @@ btn_close.style.display="none";
 
 btn_open.addEventListener("click", () =>{
     menu.style.display="flex";
-    menu.classList.add('animate__animated','animate__fadeInDown');
+    menu.classList.add('animate__animated','animate__fadeInDown','animate__faster');
     btn_close.style.display="flex";
 })
 

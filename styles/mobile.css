@@ -37,7 +37,6 @@ body{
     background: #e5e5e5;
     position: fixed;
     z-index: 100;
-    transition: all .5s;
 }
 
 #navbar {
@@ -62,6 +61,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all .5s;
 }
 #menus{
     z-index: 112;
@@ -90,6 +90,8 @@ body{
 #open_menu{
     display: flex !important;
     z-index: 110;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     width: 40px;
     height: 40px;
@@ -105,6 +107,9 @@ body{
 }
 #close_menu{
     z-index: 113;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     position: fixed;
@@ -231,7 +236,7 @@ section{
     top: -50px;
     right: 0;
     margin-right: 8%;
-    background-image: url(../contents/images/perfil.jpg);
+    background-image: url(../contents/images/perfil.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -279,7 +284,7 @@ section{
     box-shadow: inset 0 0 0 5px #e5e5e5;
     border-radius: 20px;
     transform: rotate(45deg);
-    background-image: url(../contents/images/bg_midias.jpg);
+    background-image: url(../contents/images/bg_midias.webp);
     background-size: cover;
 }
 #projetos .centro .left span:nth-of-type(2){
@@ -294,7 +299,7 @@ section{
     box-shadow: inset 0 0 0 5px #e5e5e5;
     border-radius: 20px;
     transform: rotate(45deg);
-    background-image: url(../contents/images/bg_logos.jpg);
+    background-image: url(../contents/images/bg_logos.webp);
     background-size: cover;
 }
 #projetos .centro .right span:nth-of-type(1){
@@ -308,7 +313,7 @@ section{
     box-shadow: inset 0 0 0 5px #14213d;
     border-radius: 20px;
     transform: rotate(45deg);
-    background-image: url(../contents/images/bg_sites.jpg);
+    background-image: url(../contents/images/bg_sites.webp);
     background-size: cover;
 }
 #projetos .centro .right span:nth-of-type(2){
@@ -324,7 +329,7 @@ section{
     box-shadow: inset 0 0 0 5px #14213d;
     border-radius: 20px;
     transform: rotate(45deg);
-    background-image: url(../contents/images/bg_cardfisico.jpg);
+    background-image: url(../contents/images/bg_cardfisico.webp);
     background-size: cover;
 }
 #projetos .centro .right span:nth-of-type(3){
@@ -339,7 +344,7 @@ section{
     box-shadow: inset 0 0 0 5px #e5e5e5;
     border-radius: 20px;
     transform: rotate(45deg);
-    background-image: url(../contents/images/bg_carddigital.jpg);
+    background-image: url(../contents/images/bg_carddigital.webp);
     background-size: cover;
 }
 #contato {
@@ -352,16 +357,16 @@ section{
     justify-content: center;
 }
 #contato .centro .left{
-    flex: .8;
+    flex: 2;
     align-items: center;
+    justify-content: flex-end;
     z-index: 11;
 }
 #contato .centro .left img:nth-of-type(1){
-    position: absolute;
-    left: 13%;
-    top: 50px;
-    width: 50%;
-    max-width: 150px;
+    float: left;
+    margin-right: 15%;
+    width: 70%;
+    max-width: 200px;
 }
 #contato .centro .left img:nth-of-type(2){
     position: absolute;
@@ -374,7 +379,7 @@ section{
     text-decoration: none;
     width: 60%;
     max-width: 300px;
-    margin-top: 60px;
+    margin-top: 90px;
     border-radius: 20px;
     text-align: center;
     font-size: .9em;
@@ -382,6 +387,9 @@ section{
     padding: 1.5em 2em;
     color: #14213d;
     background: #E9E4D8;
+}
+#contato .centro .left a:nth-of-type(2){
+    margin-top: 20px;
 }
 #contato_centro{
     z-index: 10;
@@ -403,7 +411,7 @@ form{
     position: absolute;
     z-index: 16;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -554,6 +562,7 @@ input[type="submit"]{
 .galeria .fotos .cartao img{
     min-width: 100%;
     margin-bottom: 10px;
+    box-shadow: #0001026e 0 0 30px;
 }
 .galeria .fotos div a{
     width: 70%;
@@ -564,12 +573,6 @@ input[type="submit"]{
     background: #0077b6;
     border-radius: 10px;
     margin-bottom: 10px;
-}
-.galeria img:hover{
-    z-index: 13;
-    flex: 1.2;
-    max-width: 27%;
-    box-shadow: #0001026e 0 0 30px;
 }
 footer{
     height: 200px;

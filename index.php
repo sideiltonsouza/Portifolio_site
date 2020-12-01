@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Sideilton Souza</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/fontes.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="styles/mobile.css">
-    <link rel="stylesheet" media="screen and (min-width: 769px)" href="styles/desktop.css">
-    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="preload" href="styles/fontes.css" as="style">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="styles/mobile.min.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="styles/desktop.min.css">
+    <link rel="stylesheet" href="styles/animate.min.css">
 </head>
 
 <body>
@@ -85,15 +85,15 @@
 
                     <div id="sites" class="fotos">
                         <div class="cartao">
-                            <img src="contents/images/sites/1.jpg" alt="" srcset="">
+                            <img src="contents/images/sites/1.webp" alt="" srcset="">
                             <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
                         </div>
                         <div class="cartao">
-                            <img src="contents/images/sites/2.jpg" alt="" srcset="">
+                            <img src="contents/images/sites/2.webp" alt="" srcset="">
                             <a href="jogo/index.php" target="_blank" rel="noopener noreferrer">Visitar</a>
                         </div>
                         <div class="cartao">
-                            <img src="contents/images/sites/3.jpg" alt="" srcset="">
+                            <img src="contents/images/sites/3.webp" alt="" srcset="">
                             <a href="quiz/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
                         </div>
                     </div>
@@ -111,8 +111,8 @@
                         <?php
                         $cartaodigital = "contents/images/cartaodigital/";
                         foreach (glob("$cartaodigital*", GLOB_NOSORT) as $image) {
-                            echo '<div class="cartao"><img src="contents/images/cartaodigital/' . basename($image) . '"alt=""srcset=""><a href="contents/downloads/' . basename($image, 'jpg') . 'pdf"
-                            download="Cartão interativo ' . basename($image, '.jpg') . '">baixar modelo</a></div>';
+                            echo '<div class="cartao"><img src="contents/images/cartaodigital/' . basename($image) . '"alt=""srcset=""><a href="contents/downloads/' . basename($image, 'webp') . 'pdf"
+                            download="' . basename($image, '.webp') . '">baixar modelo</a></div>';
                         }
                         ?>
                     </div>
@@ -138,6 +138,7 @@
                 <div class="left cont_center" data-anime="top">
                     <img src="contents/images/fale_comigo.svg" alt="" srcset="">
                     <a href="https://api.whatsapp.com/send?phone=5561995452063">Clique aqui para me chamar no <strong>WhatsApp</strong></a>
+                    <a href="mailto:sideiltonsouza@outlook.com">Ou aqui para me mandar um e-mail</a>
                     <img src="contents/images/ondinha_branca.svg" alt="" srcset="">
                 </div>
                 <div class="right cont_center">
