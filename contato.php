@@ -41,7 +41,7 @@ use PHPMailer\PHPMailer\Exception;
  $mail->SMTPSecure = false; // Define se é utilizado SSL/TLS - Mantenha o valor "false"
  $mail->SMTPAutoTLS = true; // Define se, por padrão, será utilizado TLS - Mantenha o valor "false"
  $mail->Username = 'sideilton.santos.souza@gmail.com'; // Conta de email existente e ativa em seu domínio
- $mail->Password = 'sid812063'; // Senha da sua conta de email
+ $mail->Password = 'Sid812063@'; // Senha da sua conta de email
  // DADOS DO REMETENTE
  $mail->Sender = $from; // Conta de email existente e ativa em seu domínio
  $mail->From = $from; // Sua conta de email que será remetente da mensagem
