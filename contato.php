@@ -26,6 +26,8 @@ include_once 'PHPMailer\src\PHPMailer.php';
 include_once 'PHPMailer\src\Exception.php';
 include_once 'PHPMailer\src\SMTP.php';
 include_once 'PHPMailer\src\OAuth.php';
+//Crie uma classe com as credenciais do seu email
+//e armazene nas variaveis $senha e $username
 require 'autenticar.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
