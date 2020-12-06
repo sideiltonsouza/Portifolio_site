@@ -138,8 +138,6 @@
                 <div class="left cont_center" data-anime="top">
                     <img src="contents/images/fale_comigo.svg" alt="" srcset="">
                     <a href="https://api.whatsapp.com/send?phone=5561995452063">Clique aqui para me chamar no <strong>WhatsApp</strong></a>
-                    <a href="mailto:sideiltonsouza@outlook.com">Ou aqui para me mandar um e-mail</a>
-                    <img src="contents/images/ondinha_branca.svg" alt="" srcset="">
                 </div>
                 <div class="right cont_center">
                     <form action="contato.php" method="post">

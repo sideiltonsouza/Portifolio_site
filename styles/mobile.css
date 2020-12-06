@@ -357,9 +357,8 @@ section{
     justify-content: center;
 }
 #contato .centro .left{
-    flex: 2;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     z-index: 11;
 }
 #contato .centro .left img:nth-of-type(1){
@@ -379,7 +378,7 @@ section{
     text-decoration: none;
     width: 60%;
     max-width: 300px;
-    margin-top: 90px;
+    margin-top: 70px;
     border-radius: 20px;
     text-align: center;
     font-size: .9em;
@@ -397,8 +396,8 @@ section{
     width: 100%;
     height: 665px;
     background-image: url(../contents/images/celular_whats.png);
-    background-size: 300px;
-    background-position: 150px 50px;
+    background-size: 350px;
+    background-position: 150px 0;
     background-repeat: no-repeat;
 }
 #contato .centro .right{
@@ -411,7 +410,7 @@ form{
     position: absolute;
     z-index: 16;
     width: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
