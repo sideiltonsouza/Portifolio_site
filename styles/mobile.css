@@ -366,13 +366,7 @@ section{
     margin-right: 15%;
     width: 70%;
     max-width: 200px;
-}
-#contato .centro .left img:nth-of-type(2){
-    position: absolute;
-    width: 30%;
-    max-width: 200px;
-    left: 10%;
-    bottom: 0;
+    animation: mexer 15s infinite;
 }
 #contato .centro .left a{
     text-decoration: none;

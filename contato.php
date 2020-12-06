@@ -22,10 +22,10 @@
 
 <?php
  // Adiciona o arquivo class.phpmailer.php - você deve especificar corretamente o caminho da pasta com o este arquivo.
-include_once 'PHPMailer/src/PHPMailer.php';
-include_once 'PHPMailer/src/Exception.php';
-include_once 'PHPMailer/src/SMTP.php';
-include_once 'PHPMailer/src/OAuth.php';
+include_once 'PHPMailer\src\PHPMailer.php';
+include_once 'PHPMailer\src\Exception.php';
+include_once 'PHPMailer\src\SMTP.php';
+include_once 'PHPMailer\src\OAuth.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
