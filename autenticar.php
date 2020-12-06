@@ -1,4 +1,4 @@
 <?php
-$username = 'sideilton.santos.souza@gmail.com';
+$user = 'sideilton.santos.souza@gmail.com';
 $senha  = 'Sid812063@';
 ?>

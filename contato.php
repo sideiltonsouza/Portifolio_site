@@ -10,6 +10,14 @@
 </head>
 
 <body>
+    
+<div id="tanks">
+        <span>Obrigado pelo contato!
+            <h4 id="msg">Sua mensagem foi enviada e será respondida o mais rápido possivel. Para um retorno mais rápido considere contato via WhatsApp.</h4>
+            <a href="index.php">Voltar</a>
+        </span>
+        <img src="contents/images/tanks.png" alt="" srcset="">
+    </div>
   <?php
 
     $from = $_POST['email'];
@@ -18,21 +26,18 @@
     $subject = "";
     $message = $_POST['mensagem'];
     
-    ?>
-
-<?php
  // Adiciona o arquivo class.phpmailer.php - você deve especificar corretamente o caminho da pasta com o este arquivo.
+require 'autenticar.php';
 include_once 'PHPMailer\src\PHPMailer.php';
 include_once 'PHPMailer\src\Exception.php';
 include_once 'PHPMailer\src\SMTP.php';
 include_once 'PHPMailer\src\OAuth.php';
 //Crie uma classe com as credenciais do seu email
 //e armazene nas variaveis $senha e $username
-require 'autenticar.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
 
  // Inicia a classe PHPMailer
  $mail = new PHPMailer();
@@ -43,7 +48,7 @@ use PHPMailer\PHPMailer\Exception;
  $mail->Port = 587; // Porta de comunicação SMTP - Mantenha o valor "587"
  $mail->SMTPSecure = false; // Define se é utilizado SSL/TLS - Mantenha o valor "false"
  $mail->SMTPAutoTLS = true; // Define se, por padrão, será utilizado TLS - Mantenha o valor "false"
- $mail->Username = $username; // Conta de email existente e ativa em seu domínio
+ $mail->Username = $user; // Conta de email existente e ativa em seu domínio
  $mail->Password = $senha; // Senha da sua conta de email
  // DADOS DO REMETENTE
  $mail->Sender = $from; // Conta de email existente e ativa em seu domínio
@@ -77,16 +82,6 @@ use PHPMailer\PHPMailer\Exception;
    echo "Detalhes do erro: " . $mail->ErrorInfo;
  }*/
  ?>
-
-    <div id="tanks">
-        <span>Obrigado pelo contato!
-            <h4 id="msg">Sua mensagem foi enviada e será respondida o mais rápido possivel. Para um retorno mais rápido considere contato via WhatsApp.</h4>
-            <a href="index.php">Voltar</a>
-        </span>
-        <img src="contents/images/tanks.png" alt="" srcset="">
-    </div>
-
-
 
 </body>
 
