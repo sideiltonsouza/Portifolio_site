@@ -26,7 +26,11 @@ include_once 'PHPMailer\src\PHPMailer.php';
 include_once 'PHPMailer\src\Exception.php';
 include_once 'PHPMailer\src\SMTP.php';
 include_once 'PHPMailer\src\OAuth.php';
+<<<<<<< HEAD
 include_once 'autenticar.php';
+=======
+require 'autenticar.php';
+>>>>>>> temporario
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
