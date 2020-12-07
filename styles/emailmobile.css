@@ -6,12 +6,20 @@
     overflow: hidden;
     outline: none;
 }
+body,
+.container,
+.btns,
+#tanks,
+#tanks span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 /*AGRADECIMENTO*/
 #tanks {
     width: 100%;
-    max-width: 768px;
-    min-width: 360px;
 }
 
 #tanks span {

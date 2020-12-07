@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obrigado pelo contato</title>
-    <link rel="stylesheet" media="screen and (max-width: 900px)" href="styles/emailmobile.css">
-    <link rel="stylesheet" media="screen and (min-width:901px)" href="styles/emaildesktop.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="styles/emailmobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="styles/emaildesktop.css">
 </head>
 
 <body>
+
     <?php
 
     $from = $_POST['email'];
@@ -67,12 +68,12 @@
 
 
     // Exibe uma mensagem de resultado do envio (sucesso/erro)
-    /* if ($enviado) {
-   echo "E-mail enviado com sucesso!";
- } else {
-   echo "Não foi possível enviar o e-mail.";
-   echo "Detalhes do erro: " . $mail->ErrorInfo;
- }*/
+    /*if ($enviado) {
+        echo "E-mail enviado com sucesso!";
+      } else {
+        echo "Não foi possível enviar o e-mail.";
+        echo "Detalhes do erro: " . $mail->ErrorInfo;
+    }*/
     ?>
 
     <div id="tanks">
