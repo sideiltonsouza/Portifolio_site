@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    font-family: panton, Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    transition: all .5s;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+strong {
+    font-family: pantonB, Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -2,6 +2,16 @@
 <html lang="pt-br">
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178424154-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178424154-1');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Sideilton Souza</title>
@@ -84,6 +94,10 @@
                     </div>
 
                     <div id="sites" class="fotos">
+                    <div class="cartao">
+                            <img src="contents/images/sites/0.webp" alt="" srcset="">
+                            <a href="euindico/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>
+                        </div>
                         <div class="cartao">
                             <img src="contents/images/sites/1.webp" alt="" srcset="">
                             <a href="imc/index.html" target="_blank" rel="noopener noreferrer">Visitar</a>

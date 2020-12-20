@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu Indico</title>
+    <link rel="stylesheet" href="styles/fontes.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="styles/desktop.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="styles/mobile.min.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <section id="home">
+        <div class="container" id="inicio">
+            <div class="center">
+                <span id="btn_quero_indicar">Quero indicar</span>
+                <img src="contents/images/descontos.png" alt="" srcset="">
+            </div>
+            <div class="left">
+                <div>
+                    <span>Ganhar na <strong>qualidade de ensino já é bom</strong> e se rolar um <strong>descontinho nas
+                            mensalidades fica ainda melhor!</strong></span>
+                    <p>
+                        Com o programa <strong>Eu Indico</strong>,
+                        cada amigo matriculado com
+                        sua indicação <strong>
+                            vale desconto.
+                            Dá pra chegar aos 100%!
+                        </strong>
+                    </p>
+                </div>
+                <img src="contents/images/logo_eu_indico.svg" alt="" srcset="">
+            </div>
+            <div class="right"></div>
+        </div>
+    </section>
+    <section id="secao" style="display: none;">
+        <div class="container">
+            <div class="left">
+                <form action="email.php" method="post" name="formulario">
+                    <div class="dados" id="dados_aluno">
+                        <label for="nome_aluno">Seu nome completo:</label>
+                        <input type="text" name="nome_aluno" id="nome_aluno" placeholder="Digite seu nome" required
+                            maxlength="40">
+                        <label for="polo">Seu polo:</label>
+                        <select name="polo" id="">
+                            <option value="bsb">Asa Sul</option>
+                            <option value="agl">Águas Lindas</option>
+                            <option value="cei">Ceilândia</option>
+                            <option value="gam">Gama</option>
+                            <option value="pla">Planaltina</option>
+                            <option value="tgt">Taguatinga</option>
+                        </select>
+                        <label for="ra_cpf">Seu RA ou CPF:</label>
+                        <input type="tel" name="ra_cpf" id="ra_cpf" placeholder="Digite seu RA ou CPF" required
+                            onkeypress="maskCpf(this, mcpf);" onblur="maskCpf(this, mcpf);">
+                        <div id="continuar">Continuar</div>
+                    </div>
+
+                    <div class="dados" id="dados_indicado" style="display: none;">
+                        <label for="indicado1">1º indicado:</label>
+                        <input type="text" name="indicado1" id="indicado1" placeholder="Nome do indicado" required
+                            maxlength="40">
+                        <label for="tel_indicado1">Telefone do 1º indicado:
+                        </label>
+                        <input type="tel" name="tel_indicado1" id="tel_indicado1" placeholder="(00) 00000-0000" required
+                            onkeypress="maskTel(this, mphone);" onblur="maskTel(this, mphone);" maxlength="15" minlength="14">
+
+                        <label for="indicado2">2º indicado:</label>
+                        <input type="text" name="indicado2" id="indicado2" placeholder="Opcional"
+                            maxlength="40">
+                        <label for="tel_indicado2">Telefone do 2º indicado:
+                        </label>
+                        <input type="tel" name="tel_indicado2" id="tel_indicado2" placeholder="(00) 00000-0000"
+                        onkeypress="maskTel(this, mphone);" onblur="maskTel(this, mphone);" maxlength="15" minlength="14">
+
+                        <input type="submit" value="Enviar" id="btnEnviar" style="display: none;">
+
+                    </div>
+                </form>
+            </div>
+            <div class="right" id="bg_right"></div>
+        </div>
+    </section>
+    <div id="cont_mensagem" style="display: none;">
+        <div id="mensagem">
+            <div id="btn_close">
+                <span></span>
+                <span></span>
+            </div>
+            <span id="txt">Ops! parece que você digitou algo errado. Dê uma revisada nos dados inseridos.
+            </span>
+        </div>
+    </div>
+    <a href="https://studeo.unicesumar.edu.br/" id="studeo" target="_blank">Ir para o Studeo</a>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
