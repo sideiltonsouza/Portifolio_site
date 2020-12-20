@@ -45,7 +45,7 @@
                     <div class="dados" id="dados_aluno">
                         <label for="nome_aluno">Seu nome completo:</label>
                         <input type="text" name="nome_aluno" id="nome_aluno" placeholder="Digite seu nome" required
-                            maxlength="40">
+                            maxlength="40" onkeypress="return letras(event);">
                         <label for="polo">Seu polo:</label>
                         <select name="polo" id="">
                             <option value="bsb">Asa Sul</option>
@@ -64,7 +64,7 @@
                     <div class="dados" id="dados_indicado" style="display: none;">
                         <label for="indicado1">1º indicado:</label>
                         <input type="text" name="indicado1" id="indicado1" placeholder="Nome do indicado" required
-                            maxlength="40">
+                            maxlength="40" onkeypress="return letras(event);">
                         <label for="tel_indicado1">Telefone do 1º indicado:
                         </label>
                         <input type="tel" name="tel_indicado1" id="tel_indicado1" placeholder="(00) 00000-0000" required
@@ -72,7 +72,7 @@
 
                         <label for="indicado2">2º indicado:</label>
                         <input type="text" name="indicado2" id="indicado2" placeholder="Opcional"
-                            maxlength="40">
+                            maxlength="40" onkeypress="return letras(event);">
                         <label for="tel_indicado2">Telefone do 2º indicado:
                         </label>
                         <input type="tel" name="tel_indicado2" id="tel_indicado2" placeholder="(00) 00000-0000"

@@ -87,7 +87,7 @@ btnContinuar.addEventListener("click", () => {
     var nome = document.querySelector("#nome_aluno").value;
     var raCpf = document.querySelector("#ra_cpf").value;
 
-    if (((nome.indexOf(" ") != -1 && nome.length > 4) && (raCpf != "")) && ((raCpf.length == 9 || raCpf.length == 10) || (raCpf.length == 14))) {
+    if (((nome.indexOf(" ") != -1 && nome.length > 4) && (raCpf != "") && (isNaN(nome))) && ((raCpf.length == 10 || raCpf.length == 11) || (raCpf.length == 14))) {
         document.getElementById("dados_aluno").style.display = "none";
         document.getElementById("dados_indicado").style.display = "";
         document.querySelector("#dados_aluno").style.display = "none";
@@ -99,13 +99,13 @@ btnContinuar.addEventListener("click", () => {
     }
 })
 
-btnEnviar.addEventListener("click", ()=>{
+btnEnviar.addEventListener("click", () => {
 
     var indicado1 = document.querySelector("#indicado1").value;
     var telIndicado1 = document.querySelector("#tel_indicado1").value;
 
-    if(indicado1.length < 4 || telIndicado1 < 14){
-        divMsg.style.display = ""; 
+    if (indicado1.length < 4 || telIndicado1 < 14) {
+        divMsg.style.display = "";
     }
 })
 
@@ -119,3 +119,15 @@ divMsg.addEventListener("click", () => {
 closeMsg.addEventListener("click", () => {
     divMsg.style.display = "none";
 });
+
+//Permite apenas letras no form
+function letras(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+      
+    // Verifica se é numero digitado
+    // 48 é o 0
+    // 57 é o 9
+    if (charCode >= 48 && charCode <= 57) {
+        return false;
+    }
+}

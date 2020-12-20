@@ -27,10 +27,10 @@
     $indicado2 = $_POST['indicado2'];
     $tel_indicado2 = $_POST['tel_indicado2'];
 
-    if (strlen($ra) > 9) {
+    if (strlen($ra) > 11) {
         $raOuCpf = "CPF: " . $ra;
     } else {
-        $raOuCpf = "RA: " . $ra;
+        $raOuCpf .= $ra;
     }
 
     if ($polo == "bsb") {
