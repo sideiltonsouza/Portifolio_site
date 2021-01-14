@@ -33,10 +33,6 @@
         $raOuCpf .= $ra;
     }
 
-    if ($polo == "bsb") {
-        $to = "cesumarbrasilia@gmail.com";
-    }
-
     switch ($polo) {
         case 'tgt':
             $polo = "Taguatinga";
@@ -46,6 +42,7 @@
             break;
         case 'pla':
             $polo = "Planaltina";
+            $to = "unicesumarplanaltina@gmail.com";
             break;
         case 'gam':
             $polo = "Gama";
@@ -53,8 +50,12 @@
         case 'agl':
             $polo = "Águas Lindas";
             break;
-        default:
+        case 'bsb':
             $polo = "Brasília";
+            $to = "cesumarbrasilia@gmail.com";
+            break;
+        default:
+            $polo = "Indefinido";
             break;
     }
 
