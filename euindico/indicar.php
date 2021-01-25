@@ -47,11 +47,9 @@
             break;
         case 'gam':
             $polo = "Gama";
-            $to = "coordenacaopologama@gmail.com";
             break;
         case 'agl':
             $polo = "Águas Lindas";
-            $to = "unicesumar.al@gmail.com";
             break;
         case 'bsb':
             $polo = "Brasília";
@@ -105,13 +103,12 @@
         $mail->CharSet = 'utf-8'; // Charset da mensagem (opcional)
         // DEFINIÇÃO DA MENSAGEM
         $mail->Subject  = "Indicações recebidas através do site"; // Assunto da mensagem
-        $mail->Body .= "<br><h3>O(a) aluno(a): " . ucwords($from) ." ". $raOuCpf . " indicou: </h3><br><h4>"; // Texto da mensagem
-        $mail->Body .= ucwords($indicado1) . "<br>Telefone: " . $tel_indicado1 . "</h4><br>"; // Texto da mensagem
+        $mail->Body .= "<br><h3>O aluno " . $from . " com " . $raOuCpf . " indicou:</h3><br>"; // Texto da mensagem
+        $mail->Body .= "<h4>" . $indicado1 . " <br>Telefone: " . $tel_indicado1 . "</h4>"; // Texto da mensagem
 
         if ($indicado2) {
-            $mail->Body .= "<h4>e " . ucwords($indicado2) . "<br>Telefone: " . $tel_indicado2 . "</h4>";
+            $mail->Body .= "<br><h4>e " . $indicado2 . "<br>Telefone: " . $tel_indicado2 . "</h4>";
         }
-        
         // $mail->Body .= " Assunto: Teste"; // Texto da mensagem
         //$mail->Body .= nl2br($message); // Texto da mensagem
         // ENVIO DO EMAIL
@@ -153,4 +150,5 @@
 
 
 </body>
+
 </html>

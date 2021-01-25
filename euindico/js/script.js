@@ -95,6 +95,11 @@ btnContinuar.addEventListener("click", () => {
         bgRight.classList.add("indicado");
         document.getElementById("btnEnviar").style.display = "";
     } else {
+        if (nome.indexOf(" ") == -1) {
+            document.querySelector("#txt").innerHTML = "Ops! Digite seu nome e sobrenome, por favor ;).";
+        } else {
+            document.querySelector("#txt").innerHTML = "Ops! parece que você digitou algo errado. Dê uma revisada no RA ou CPF ;).";
+        }
         divMsg.style.display = "";
     }
 })
@@ -105,6 +110,7 @@ btnEnviar.addEventListener("click", () => {
     var telIndicado1 = document.querySelector("#tel_indicado1").value;
 
     if (indicado1.length < 4 || telIndicado1 < 14) {
+        document.querySelector("#txt").innerHTML = "Ops! parece que você digitou algo errado. Dê uma revisada nos dados inseridos.";
         divMsg.style.display = "";
     }
 })
@@ -123,7 +129,7 @@ closeMsg.addEventListener("click", () => {
 //Permite apenas letras no form
 function letras(e) {
     var charCode = e.charCode ? e.charCode : e.keyCode;
-      
+
     // Verifica se é numero digitado
     // 48 é o 0
     // 57 é o 9
